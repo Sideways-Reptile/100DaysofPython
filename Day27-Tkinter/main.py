@@ -10,8 +10,8 @@ window.minsize(width=500, height=300)
 myLabel = Label(text="I am a label", font=("Ariel", 24, "bold"))
 myLabel.pack(side="top")
 #Can change the value of an option several ways
-myLabel["text"] = "New Text"
-myLabel.config(text="Diff Text")
+#myLabel["text"] = "New Text"
+#myLabel.config(text="Diff Text")
 
 #BUTTON - has many optional args,kwargs than can be used. Like text, command. Command is used to initiate
 #commands when the button is clicked. Lots of auto detection for the click. function below is what happens
