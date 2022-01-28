@@ -1,0 +1,41 @@
+from tkinter import *
+
+
+def button_clicked():
+    print("I was clicked")
+    myLabel.config(text=textfield.get())
+
+
+window = Tk()
+window.title("First Gui Program")
+window.minsize(width=500, height=300)
+window.config(padx=20, pady=20)
+
+#Label.
+#Class inside of tkinter #Can change the value of an option several ways
+#myLabel["text"] = "New Text"
+#myLabel.config(text="Diff Text")
+myLabel = Label(text="I am a label", font=("Ariel", 24, "bold"))
+myLabel.grid(column=0, row=0)
+myLabel.config(padx=5, pady=5)
+
+
+#BUTTON -
+#has many optional args,kwargs than can be used. Like text, command. Command is used to initiate
+#commands when the button is clicked. Lots of auto detection for the click. function below is what happens
+#when the button is clicked.
+button = Button(text="Click Me", command=button_clicked)
+button.grid(column=1, row=1)
+radio_state = IntVar()
+new_button = Radiobutton(text="Option1", value=1, variable=radio_state)
+new_button.grid(column=2, row=0)
+
+
+#ENTRY - creates a text field for users to enter data. Code below simply creates and places the textbox.
+#Use the .get() method to obtain the data from the entry field.
+textfield = Entry(width=10)
+textfield.grid(column=3, row=2)
+
+
+
+window.mainloop()

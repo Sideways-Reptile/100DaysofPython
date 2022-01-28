@@ -1,41 +1,44 @@
 from tkinter import *
 
 
+def mi_to_km():
+    miles = int(textfield.get())
+    kilos = round(miles * 1.609)
+    ans_label.config(text=kilos)
+
+
+#SCREEN
 window = Tk()
-window.title("First Gui Program")
-window.minsize(width=500, height=300)
+window.title("Mile to Km Converter")
+window.minsize(width=200, height=150)
+window.config(padx=20, pady=20)
 
-#Label. Class inside of tkinter
+#LABELS
+mi_label = Label(text="Miles", font=("Ariel", 12,))
+mi_label.grid(column=4, row=0)
+mi_label.config(padx=5, pady=5)
 
-myLabel = Label(text="I am a label", font=("Ariel", 24, "bold"))
-myLabel.pack(side="top")
-#Can change the value of an option several ways
-#myLabel["text"] = "New Text"
-#myLabel.config(text="Diff Text")
+km_label = Label(text="Km", font=("Ariel", 12,))
+km_label.grid(column=4, row=2)
+km_label.config(padx=5, pady=5)
 
-#BUTTON - has many optional args,kwargs than can be used. Like text, command. Command is used to initiate
-#commands when the button is clicked. Lots of auto detection for the click. function below is what happens
-#when the button is clicked.
+eq_label = Label(text="is equal to", font=("Ariel", 12,))
+eq_label.grid(column=2, row=2)
+eq_label.config(padx=5, pady=5)
 
-
-def button_clicked():
-    print("I was clicked")
-    myLabel.config(text=textfield.get())
-
-
-button = Button(text="Click Me", command=button_clicked)
-button.pack()
+ans_label = Label(text="0", font=("Ariel", 12,))
+ans_label.grid(column=3, row=2)
+ans_label.config(padx=5, pady=5)
 
 
-#ENTRY - creates a text field for users to enter data. Code below simply creates and places the textbox.
-#Use the .get() method to obtain the data from the entry field.
+#BUTTON
+button = Button(text="Calculate", command=mi_to_km)
+button.grid(column=3, row=3)
 
 
+#ENTRY
 textfield = Entry(width=10)
-textfield.pack()
-
-
-
+textfield.grid(column=3, row=0)
 
 
 window.mainloop()

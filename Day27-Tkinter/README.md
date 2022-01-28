@@ -1,3 +1,9 @@
-# 100DaysofPython
-Repository for storing my code made over 100 days while tracking with Udemy course work. 
-Part of setting up this repo is to also gain experince with git and the workflow of development. 
+# Notes from the Day
+Position Managers for Tk
+
+-pack() Uses things like left, right, top bottom for placement\
+-place() Can place items specifically, however, it can be hard to now exactly where to place. Uses x, y coordinates\
+-grid() Can be used like Place but uses column, row
+
+CANNOT USE grid AND pack in the same file.
+These are used to place the tkinter widgets
