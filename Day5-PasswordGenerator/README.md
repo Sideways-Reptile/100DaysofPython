@@ -1,4 +1,4 @@
-**DAY 6 - Lists**
+**DAY 5 - Lists**
 
 Today's lesson taught me a lot about lists and how to take input from a User
 and use that as a parameter for a Range function. in this case, the user tells us
