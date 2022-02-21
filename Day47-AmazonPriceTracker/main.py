@@ -5,8 +5,8 @@ from bs4 import BeautifulSoup
 
 BUY_PRICE = 55
 smtp = "smtp.gmail.com"
-EMAIL = "Sidewaays666@gmail.com"
-PASSWORD = "Rq5fw5kqpQmXdUm"
+EMAIL = MY_EMAIL
+PASSWORD = MY_PASSWORD
 
 url = "https://www.amazon.com/DualShock-Wireless-Controller-PlayStation-Glacier-4/dp/B07VBBJ6KZ/ref=sr_1_4?crid=1NC5YXCLBBHPP&keywords=ps4+controller&qid=1645416176&sprefix=ps4+%2Caps%2C221&sr=8-4"
 header = {
@@ -34,6 +34,6 @@ if price_as_float < BUY_PRICE:
         connection.login(user=EMAIL, password=PASSWORD)
         connection.sendmail(
             from_addr=EMAIL,
-            to_addrs="impressive-tie@pm.me",
+            to_addrs=EMAIL,
             msg=f"Subject:Amazon Price Alert!\n\n{message}\n{url}"
         )
