@@ -1,0 +1,62 @@
+/*******************ID SELECTORS*******************/
+#heading{
+    color: blue;
+}
+
+/*******************CLASS SELECTORS*******************/
+/*Can set multiple for a single selector.*/
+.bacon{
+    background-color: red;
+}
+
+.broccoli{
+    background-color: green;
+}
+
+.circular{
+    border-radius: 100%;
+}
+
+.top-cont {
+    background-color: #E4F9F5;
+    height: 200px;
+    width: 200px;
+    /*padding: 20px;
+    border: solid 10px;
+    margin: 20px;*/
+}
+
+.middle-cont {
+    background-color: red;
+    height: 200px;
+    width: 200px;
+    /*border: solid 20px;
+    margin-left: 260px;*/
+    }
+
+.bottom-cont {
+    background-color: blue;
+    height: 200px;
+    width: 200px;
+    /*border: solid 10px;
+    margin-left: 500px;*/
+}
+
+/**************TAG SELECTORS***********/
+body{
+    margin: 0;
+}
+
+div {
+    display: inline-block;
+}
+
+h1 {
+    margin-top: 0;
+    color: red;
+    font: "Ariel";
+    font-size: 20px;
+}
+img:hover{
+    background-color: gold;
+}
